@@ -1,0 +1,153 @@
+body {
+    background: unset !important;
+}
+
+main .Topstory-container {
+    width: 736px;
+    margin-left: 160px;
+
+    > div:nth-child(2) {
+        display: none;
+    }
+
+    .Topstory-mainColumn {
+        width: unset;
+        margin-right: 0;
+        flex-shrink: 1;
+
+        > div:not(.Topstory-mainColumnCard) {
+            display: none;
+        }
+
+        .Topstory-mainColumnCard {
+            box-shadow: unset;
+
+            .Button, button {
+                opacity: 0.6;
+            }
+
+            .ContentItem-title {
+                font-size: 20px;
+                color: #4007a2;
+                font-weight: normal;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+
+                span {
+                    color: #c80000;
+                }
+            }
+
+            span.RichText {
+                color: #00000099;
+
+                &:hover {
+                    color: unset;
+                }
+            }
+
+            .UserLink-link img {
+
+                display: none;
+            }
+
+            .RichContent-cover {
+                img {
+                    opacity: 0;
+                }
+
+                &:hover {
+                    img {
+                        opacity: 1;
+                    }
+
+                }
+            }
+
+
+            .ContentItem-actions > * {
+                margin-left: 4px;
+            }
+        }
+
+
+    }
+
+}
+
+.RichContent {
+    figure {
+        width: 50%;
+
+        div {
+            background: #fbfbfb;
+        }
+
+        img {
+            opacity: 0;
+
+
+            &:hover {
+                opacity: 1;
+            }
+        }
+    }
+
+
+}
+
+svg {
+    display: none;
+}
+
+
+header {
+    nav {
+        order: 2;
+
+        * {
+            font-size: 14px !important;
+            font-weight: normal !important;
+        }
+
+        div > div {
+            display: none;
+        }
+    }
+
+    .SearchBar {
+        a {
+            display: none;
+        }
+
+        .Popover {
+            background-image: url("https://www.baidu.com/img/flexible/logo/pc/result@2.png");
+            background-size: 100px 32px;
+            background-repeat: no-repeat;
+
+            .SearchBar-input {
+                margin-left: 120px;
+                max-width: calc(100% - 120px);
+
+            }
+        }
+
+    }
+}
+
+* {
+    box-shadow: unset !important;
+}
+
+.Button, button, .QuestionHeader-topics > div {
+    background: #ececec !important;
+    color: #0d0d0d !important;
+    padding: 3px 6px !important;
+    line-height: unset !important;
+    border-radius: 4px !important;
+    font-size: 12px !important;
+    border: unset !important;
+    height: unset !important;
+}
