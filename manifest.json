@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
-  "name": "Zhihu DOM Modifier",
+  "name": "知乎摸鱼助手",
   "version": "1.0",
-  "description": "在 *.zhihu.com 上修改 DOM 的简单示例（支持 SPA 路由变化）。",
+  "description": "把知乎伪装成百度的样子~",
   "icons": {
     "48": "icons/icon48.png",
     "128": "icons/icon128.png"
