@@ -2,6 +2,52 @@ body {
     background: unset !important;
 }
 
+* {
+    box-shadow: unset !important;
+}
+
+img[alt="广告"] {
+    display: none !important;
+}
+
+.Notification-white {
+    background: #fbfbfb !important;
+}
+
+.RichContent, .QuestionRichText {
+    figure {
+        width: 50%;
+
+        div {
+            background: #fbfbfb;
+        }
+
+        img {
+            opacity: 0;
+
+
+            &:hover {
+                opacity: 1;
+            }
+        }
+    }
+}
+
+svg {
+    display: none;
+}
+
+.Button, button, .QuestionHeader-topics > div {
+    background: #ececec !important;
+    color: #0d0d0d !important;
+    padding: 3px 6px !important;
+    line-height: unset !important;
+    border-radius: 4px !important;
+    font-size: 12px !important;
+    border: unset !important;
+    height: unset !important;
+}
+
 main .Topstory-container {
     width: 736px;
     margin-left: 160px;
@@ -40,11 +86,9 @@ main .Topstory-container {
                 }
             }
 
-            span.RichText {
-                color: #00000099;
-
-                &:hover {
-                    color: unset;
+            .RichContent.is-collapsed {
+                span.RichText {
+                    color: #00000099;
                 }
             }
 
@@ -54,16 +98,14 @@ main .Topstory-container {
             }
 
             .RichContent-cover {
-                img {
-                    opacity: 0;
-                }
-
-                &:hover {
-                    img {
-                        opacity: 1;
-                    }
-
-                }
+                /*img {*/
+                /*    opacity: 0;*/
+                /*}*/
+                /*&:hover {*/
+                /*    img {*/
+                /*        opacity: 1;*/
+                /*    }*/
+                /*}*/
             }
 
 
@@ -77,33 +119,16 @@ main .Topstory-container {
 
 }
 
-.RichContent {
-    figure {
-        width: 50%;
-
-        div {
-            background: #fbfbfb;
-        }
-
-        img {
-            opacity: 0;
-
-
-            &:hover {
-                opacity: 1;
-            }
-        }
-    }
-
-
-}
-
-svg {
-    display: none;
-}
-
 
 header {
+
+    > div > div:first-child {
+        background-image: url(https://www.baidu.com/img/flexible/logo/pc/result@2.png);
+        background-size: 100px 32px;
+        background-repeat: no-repeat;
+        background-position: left center;
+    }
+
     nav {
         order: 2;
 
@@ -123,31 +148,21 @@ header {
         }
 
         .Popover {
-            background-image: url("https://www.baidu.com/img/flexible/logo/pc/result@2.png");
-            background-size: 100px 32px;
-            background-repeat: no-repeat;
-
             .SearchBar-input {
                 margin-left: 120px;
                 max-width: calc(100% - 120px);
+                padding: 0 0 0 16px;
+            }
 
+            .SearchBar-searchButton {
+                background: #4e6ef2 !important;
+                width: 100px;
+                height: 100% !important;
+                color: white !important;
+                border-radius: 0 10px 10px 0 !important;
             }
         }
 
     }
 }
 
-* {
-    box-shadow: unset !important;
-}
-
-.Button, button, .QuestionHeader-topics > div {
-    background: #ececec !important;
-    color: #0d0d0d !important;
-    padding: 3px 6px !important;
-    line-height: unset !important;
-    border-radius: 4px !important;
-    font-size: 12px !important;
-    border: unset !important;
-    height: unset !important;
-}

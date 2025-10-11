@@ -4,25 +4,23 @@
     document.querySelector("header .SearchBar-askContainer")?.remove()
 
     function modifyDOM() {
-        try {
-            document.querySelectorAll(".Button").forEach(element => {
-                if (element.getAttribute("aria-label"))
-                    element.textContent = element.getAttribute("aria-label")
-            })
 
-            document.querySelectorAll(".ContentItem-title a").forEach(element => {
+        document.querySelectorAll(".Button").forEach(element => {
+            const label = element.getAttribute("aria-label")
+            if (label && label !== element.textContent)
+                element.textContent = label
+        })
 
-                if (!element.dataset.modified) {
-                    const randomString = randomChineseSubstring(element.textContent)
-                    element.innerHTML = element.textContent.replace(randomString, "<span>" + randomString + "</span>")
-                    element.dataset.modified = "true"
-                }
-            })
-            document.querySelector(".is-active").className = ""
+        document.querySelectorAll(".ContentItem-title a").forEach(element => {
 
-        } catch (e) {
-            console.warn("[Zhihu DOM Modifier] modifyDOM 错误：", e);
-        }
+            if (!element.dataset.modified) {
+                const randomString = randomChineseSubstring(element.textContent)
+                element.innerHTML = element.textContent.replace(randomString, "<span>" + randomString + "</span>")
+                element.dataset.modified = "true"
+            }
+        })
+
+
     }
 
     // 每 1 秒执行一次（根据需要可调整）
