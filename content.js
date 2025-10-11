@@ -1,14 +1,9 @@
 (() => {
     document.querySelectorAll("header a")[0]?.remove()
     document.querySelector("header .SearchBar-askContainer")?.remove()
+    document.querySelector(".SearchBar-searchButton").innerHTML = "百度一下"
 
     function modifyDOM() {
-        document.querySelectorAll(".Button").forEach(element => {
-            const label = element.getAttribute("aria-label")
-            if (label && label !== element.textContent)
-                element.textContent = label
-        })
-
         document.querySelectorAll(".ContentItem-title a").forEach(element => {
             if (!element.dataset.modified) {
                 const randomString = randomChineseSubstring(element.textContent)

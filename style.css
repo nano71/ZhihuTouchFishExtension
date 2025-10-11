@@ -6,7 +6,7 @@ body {
     box-shadow: unset !important;
 }
 
-img[alt="广告"] {
+img[alt="广告"], .Pc-word-new, .Question-sideColumn {
     display: none !important;
 }
 
@@ -34,11 +34,14 @@ img[alt="广告"] {
 }
 
 svg {
-    display: none;
+    opacity: .2;
+
 }
 
-.Button, button, .QuestionHeader-topics > div {
-    background: #ececec !important;
+button:not(.QuestionRichText-more):not(.ContentItem-more):not(.SearchBar-searchButton), .QuestionHeader-topics > div {
+    text-align: left !important;
+    min-width: unset !important;
+    background: #fbfbfb !important;
     color: #0d0d0d !important;
     padding: 3px 6px !important;
     line-height: unset !important;
@@ -68,9 +71,6 @@ main .Topstory-container {
         .Topstory-mainColumnCard {
             box-shadow: unset;
 
-            .Button, button {
-                opacity: 0.6;
-            }
 
             .ContentItem-title {
                 font-size: 20px;
@@ -109,9 +109,6 @@ main .Topstory-container {
             }
 
 
-            .ContentItem-actions > * {
-                margin-left: 4px;
-            }
         }
 
 
@@ -119,8 +116,35 @@ main .Topstory-container {
 
 }
 
+.ContentItem-actions, .QuestionButtonGroup, .QuestionHeaderActions {
+    margin: 0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
 
-header {
+    > * {
+
+        margin-right: 0 !important;
+    }
+
+    > *:not(:first-child) {
+        margin-left: 4px !important;
+    }
+
+    .Button, button {
+        opacity: 0.6;
+        margin-right: 0 !important;
+    }
+}
+
+.Comments-container, .List-headerOptions, .ContentItem-meta, .ProfileButtonGroup {
+    button {
+        color: #0d0d0d;
+        opacity: 0.6;
+    }
+}
+
+
+header.AppHeader {
 
     > div > div:first-child {
         background-image: url(https://www.baidu.com/img/flexible/logo/pc/result@2.png);
@@ -155,6 +179,7 @@ header {
             }
 
             .SearchBar-searchButton {
+                font-size: 16px;
                 background: #4e6ef2 !important;
                 width: 100px;
                 height: 100% !important;
