@@ -35,7 +35,10 @@ img[alt="广告"], .Pc-word-new, .Question-sideColumn {
 
 svg {
     opacity: .2;
+}
 
+.Avatar {
+    opacity: .5;
 }
 
 button:not(.QuestionRichText-more):not(.ContentItem-more):not(.SearchBar-searchButton), .QuestionHeader-topics > div {
@@ -49,6 +52,15 @@ button:not(.QuestionRichText-more):not(.ContentItem-more):not(.SearchBar-searchB
     font-size: 12px !important;
     border: unset !important;
     height: unset !important;
+
+    &.Button--red {
+        color: #f05159 !important;
+    }
+
+    &.is-active {
+        color: #1772f6 !important;
+
+    }
 }
 
 main .Topstory-container {
@@ -140,10 +152,14 @@ main .Topstory-container {
     }
 }
 
-.Comments-container, .List-headerOptions, .ContentItem-meta, .ProfileButtonGroup {
+.Comments-container, .List-headerOptions, .ContentItem-meta, .ProfileButtonGroup, .Modal-content {
     button {
         color: #0d0d0d;
         opacity: 0.6;
+
+        &:hover {
+            opacity: 1;
+        }
     }
 }
 
