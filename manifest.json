@@ -1,7 +1,7 @@
 {
     "manifest_version": 3,
     "name": "知乎摸鱼助手",
-    "version": "1.0",
+    "version": "1.0.1",
     "description": "把知乎伪装成百度的样子~",
     "icons": {
         "48": "icons/icon48.png",
