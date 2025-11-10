@@ -2,16 +2,15 @@
     document.querySelectorAll("header a")[0]?.remove()
     document.querySelector("header .SearchBar-askContainer")?.remove()
     document.querySelector(".SearchBar-searchButton").innerHTML = "百度一下"
+    const style = document.createElement('style');
+    style.textContent = `
+  header.AppHeader > div > div:first-child {
+    background-image: url(${chrome.runtime.getURL('images/logo.png')});
+  }
+`;
+    changeFavicon()
+    document.head.appendChild(style);
 
-    function modifyDOM() {
-        document.querySelectorAll(".ContentItem-title a").forEach(element => {
-            if (!element.dataset.modified) {
-                const randomString = randomChineseSubstring(element.textContent)
-                element.innerHTML = element.textContent.replace(randomString, "<span>" + randomString + "</span>")
-                element.dataset.modified = "true"
-            }
-        })
-    }
     setInterval(modifyDOM, 1000);
 })();
 
@@ -23,3 +22,23 @@ function randomChineseSubstring(str) {
     return chars.slice(start, start + len).join('')
 }
 
+function modifyDOM() {
+    document.querySelectorAll(".ContentItem-title a").forEach(element => {
+        if (!element.dataset.modified) {
+            const randomString = randomChineseSubstring(element.textContent)
+            element.innerHTML = element.textContent.replace(randomString, "<span>" + randomString + "</span>")
+            element.dataset.modified = "true"
+        }
+    })
+}
+
+function changeFavicon() {
+    const oldIcons = document.querySelectorAll('link[rel*="icon"]');
+    oldIcons.forEach(el => el.parentNode.removeChild(el));
+
+    const link = document.createElement('link');
+    link.rel = 'icon';
+    link.type = 'image/x-icon';
+    link.href = chrome.runtime.getURL('images/favicon.ico'); // 从插件资源加载
+    document.head.appendChild(link);
+}

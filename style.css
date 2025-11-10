@@ -167,7 +167,6 @@ main .Topstory-container {
 header.AppHeader {
 
     > div > div:first-child {
-        background-image: url(https://www.baidu.com/img/flexible/logo/pc/result@2.png);
         background-size: 100px 32px;
         background-repeat: no-repeat;
         background-position: left center;
