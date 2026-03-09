@@ -6,7 +6,7 @@ body {
     box-shadow: unset !important;
 }
 
-img[alt="广告"], .Pc-word-new, .Question-sideColumn {
+img[alt="广告"], .Pc-word-new, .Question-sideColumn, .TopstoryItem--advertCard {
     display: none !important;
 }
 
@@ -210,3 +210,26 @@ header.AppHeader {
     }
 }
 
+#QuestionAnswers-answers .ListShortcut .List-item {
+    .ContentItem.AnswerItem {
+        > div[tabindex="0"] {
+            > div:first-child > div:first-child > div:first-child {
+                height: 23px;
+                width: 23px;
+
+                img {
+                    height: 23px;
+                    width: 23px;
+                }
+            }
+
+            button {
+                white-space: nowrap;
+            }
+
+            span:nth-child(2) button {
+                display: none;
+            }
+        }
+    }
+}
