@@ -210,25 +210,27 @@ header.AppHeader {
     }
 }
 
-#QuestionAnswers-answers .ListShortcut .List-item {
-    .ContentItem.AnswerItem {
-        > div[tabindex="0"] {
-            > div:first-child > div:first-child > div:first-child {
-                height: 23px;
-                width: 23px;
-
-                img {
+.ListShortcut {
+    .Card.AnswerCard, .Card.TopstoryItem {
+        .ContentItem.AnswerItem {
+            > div[tabindex="0"] {
+                > div:first-child > div:first-child > div:first-child {
                     height: 23px;
                     width: 23px;
+
+                    img {
+                        height: 23px;
+                        width: 23px;
+                    }
                 }
-            }
 
-            button {
-                white-space: nowrap;
-            }
+                button {
+                    white-space: nowrap;
+                }
 
-            span:nth-child(2) button {
-                display: none;
+                span:nth-child(2) button {
+                    display: none;
+                }
             }
         }
     }
