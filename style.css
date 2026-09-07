@@ -227,10 +227,12 @@ header.LeanAppHeaderBar {
 
     }
 }
-.SimpleSearchBar-solidSearchButton{
+
+.SimpleSearchBar-solidSearchButton {
     color: white !important;
     background: linear-gradient(136deg, #286aff, #4e6ef2, #7274f9, #9f66ff);
 }
+
 .ListShortcut {
     .Card.AnswerCard, .Card.TopstoryItem {
         .ContentItem.AnswerItem {
@@ -268,6 +270,15 @@ main.App-main {
         padding-left: 0;
     }
 
+    .QuestionPage {
+        > div {
+            padding-left: 0;
+        }
+
+        > div > div:first-child {
+            padding-left: 0;
+        }
+    }
 }
 
 
