@@ -4,10 +4,16 @@
     document.querySelector(".SearchBar-searchButton").innerHTML = "百度一下"
     const style = document.createElement('style');
     style.textContent = `
-  header.AppHeader > div > div:first-child {
+  header.LeanAppHeaderBar > div > div:first-child {
     background-image: url(${chrome.runtime.getURL('images/logo.png')});
   }
 `;
+    const logoArea = document.querySelector("header.LeanAppHeaderBar > div:first-child > div:first-child > div:first-child > div:first-child")
+    logoArea.style.height = "100%";
+    logoArea.style.cursor = "pointer";
+    logoArea.addEventListener("click", () => {
+        window.location.href = "/";
+    })
     changeFavicon()
     document.head.appendChild(style);
 

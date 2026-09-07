@@ -41,7 +41,7 @@ svg {
     opacity: .5;
 }
 
-button:not(.QuestionRichText-more):not(.ContentItem-more):not(.SearchBar-searchButton), .QuestionHeader-topics > div {
+button:not(.QuestionRichText-more):not(.ContentItem-more):not(.SearchBar-searchButton):not(.SimpleSearchBar-solidSearchButton), .QuestionHeader-topics > div {
     text-align: left !important;
     min-width: unset !important;
     background: #fbfbfb !important;
@@ -65,7 +65,8 @@ button:not(.QuestionRichText-more):not(.ContentItem-more):not(.SearchBar-searchB
 
 main .Topstory-container {
     width: 736px;
-    margin-left: 160px;
+    margin-left: 0px;
+    padding: 0;
 
     > div:nth-child(2) {
         display: none;
@@ -75,6 +76,7 @@ main .Topstory-container {
         width: unset;
         margin-right: 0;
         flex-shrink: 1;
+        padding: 0;
 
         > div:not(.Topstory-mainColumnCard) {
             display: none;
@@ -164,10 +166,10 @@ main .Topstory-container {
 }
 
 
-header.AppHeader {
-
+header.LeanAppHeaderBar {
     > div > div:first-child {
-        background-size: 100px 32px;
+        margin-left: 0;
+        background-size: auto 40px;
         background-repeat: no-repeat;
         background-position: left center;
     }
@@ -186,30 +188,49 @@ header.AppHeader {
     }
 
     .SearchBar {
+        height: 46px;
+
         a {
             display: none;
         }
 
         .Popover {
+            background: linear-gradient(136deg, #286aff, #4e6ef2, #7274f9, #9f66ff);
+            border-radius: 15px;
+            box-sizing: border-box;
+            width: unset;
+            padding: 2px 2px;
+            margin-left: 20px;
+
             .SearchBar-input {
-                margin-left: 120px;
-                max-width: calc(100% - 120px);
+                border: 2px solid white;
+                outline: 1px solid white;
+                margin-left: 0;
                 padding: 0 0 0 16px;
+                width: 100%;
+                background: white;
+                border-radius: 13px;
+                height: 42px;
             }
 
             .SearchBar-searchButton {
                 font-size: 16px;
-                background: #4e6ef2 !important;
                 width: 100px;
                 height: 100% !important;
                 color: white !important;
-                border-radius: 0 10px 10px 0 !important;
+                border-radius: 13px;
+                font-weight: 500;
+                letter-spacing: 1px;
+                background: linear-gradient(136deg, #286aff, #4e6ef2, #7274f9, #9f66ff);
             }
         }
 
     }
 }
-
+.SimpleSearchBar-solidSearchButton{
+    color: white !important;
+    background: linear-gradient(136deg, #286aff, #4e6ef2, #7274f9, #9f66ff);
+}
 .ListShortcut {
     .Card.AnswerCard, .Card.TopstoryItem {
         .ContentItem.AnswerItem {
@@ -233,5 +254,33 @@ header.AppHeader {
                 }
             }
         }
+    }
+}
+
+main.App-main {
+    .Search-container {
+        > div {
+            padding-left: 0;
+        }
+    }
+
+    > div > div {
+        padding-left: 0;
+    }
+
+}
+
+
+#root {
+    > div > div {
+        > aside {
+            position: absolute;
+            right: 50px;
+        }
+
+        > div > aside {
+            display: none;
+        }
+
     }
 }
