@@ -14,7 +14,7 @@ img[alt="广告"], .Pc-word-new, .Question-sideColumn, .TopstoryItem--advertCard
     background: #fbfbfb !important;
 }
 
-.RichContent, .QuestionRichText {
+.RichContent, .QuestionRichText, .Post-RichTextContainer {
     figure {
         width: 50%;
 
@@ -279,8 +279,13 @@ main.App-main {
             padding-left: 0;
         }
     }
+
+
 }
 
+.Question-mainColumn {
+    width: unset !important;
+}
 
 #root {
     > div > div {

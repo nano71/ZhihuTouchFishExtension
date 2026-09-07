@@ -12,7 +12,7 @@
     logoArea.style.height = "100%";
     logoArea.style.cursor = "pointer";
     logoArea.addEventListener("click", () => {
-        window.location.href = "/";
+        window.location.href = "https://zhihu.com";
     })
     changeFavicon()
     document.head.appendChild(style);
